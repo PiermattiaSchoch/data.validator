@@ -180,7 +180,7 @@ display_results <- function(data, n_passes, n_fails, n_warns) {
   }
   if (nrow(results_warning) > 0) {
     is_neutral_active <- TRUE
-    label_color_neutral <- "blue"
+    label_color_neutral <- "yellow"
   }
   segment_title <- data_name
   code <- segment(
@@ -198,7 +198,7 @@ display_results <- function(data, n_passes, n_fails, n_warns) {
         results = results_warning,
         color = label_color_neutral,
         label = "Warnings",
-        mark = "big blue exclamation circle",
+        mark = "yellow blue exclamation circle",
         type = warning_id,
         active = is_neutral_active),
       if (!is.null(n_passes)) make_accordion_element(
